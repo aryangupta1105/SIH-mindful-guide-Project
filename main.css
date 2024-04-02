@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes moveup {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes moveright {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes moveleft {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.Hero{
+    animation: moveup 1s  1 linear 500ms;
+    animation-fill-mode:both;
+    transition: all 100ms ease-in-out;
+}
+.QuotePage{
+    animation: moveright 500ms  1 linear 900ms;
+    animation-fill-mode:both;
+    transition: all 500ms ease-in-out;
+}
+.quoteImg{
+    animation: moveright 500ms  1 linear 900ms;
+    animation-fill-mode:both;
+    transition: all 500ms ease-in-out;
+}
+.Quote{
+    animation: moveup 1s  1 linear 1500ms;
+    animation-fill-mode:both;
+    transition: all 1s ease-in-out;
+}
+
+.ball{
+    position: absolute;
+    right: 200px;
+    height: 200px;
+    width: 200px;
+    top: 1%;
+    /* border: 1px solid black; */
+    /* background-color: transparent; */
+    border-radius:100%;
+    box-shadow: 10px  5px 60px red;
+    animation: float infinite linear 5000ms;
+    animation-delay: 500ms;
+    animation-direction: alternate;
+} 
+.ball2{
+    position: absolute;
+    bottom: 1%;
+    height: 200px;
+    width: 200px;
+    /* border: 1px solid black; */
+    /* background-color: transparent; */
+    border-radius:100%;
+    box-shadow: 10px  5px 60px yellow;
+    animation: float2 infinite linear 5000ms;
+    animation-delay: 500ms;
+    animation-direction: alternate;
+} 
+
+
+@keyframes float {
+    0%{
+        translate: -100px -50px;
+    }
+    
+    100%{
+        transform: rotate(360deg);
+        translate: 50px;
+        background-color: lightgreen;
+    box-shadow: 10px  5px 60px lightgreen;
+
+    }
+    
+}
+@keyframes float2{
+    0%{
+        translate: 100px 50px;
+    }
+    
+    100%{
+        transform: rotate(360deg);
+        translate: 50px;
+        background-color: lightgreen;
+    box-shadow: 10px  5px 60px lightgreen;
+
+    }
+    
+}
+
+.Menu.active{
+    animation: moveleft 1 linear 1000ms;
+    animation-delay: 500ms;
+    transition: all 500ms ease-in-out;
+}
+.Burger.active {
+    border: 1px solid white;
+    padding: 5px 10px;
+    transition: all 200ms ease-in-out;
+    
+}
+
+button{
+    cursor: pointer;
+}
